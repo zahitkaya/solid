@@ -2,9 +2,8 @@ package com.example.demo;
 
 import com.example.demo.solid.dependency_inversion.*;
 import com.example.demo.solid.liskov_substitution.*;
-import com.example.demo.solid.open_closed.Addition;
-import com.example.demo.solid.open_closed.Calculator;
-import com.example.demo.solid.open_closed.Multiply;
+import com.example.demo.solid.open_closed.*;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

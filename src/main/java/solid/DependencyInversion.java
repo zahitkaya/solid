@@ -22,8 +22,6 @@ public class DependencyInversion {
 }
 
 interface IControll {
-    boolean isPressed();
-
     void apply();
 }
 
@@ -38,7 +36,6 @@ class ControllManegement implements IControll {
     private boolean button;
     IController client;
 
-    @Override
     public boolean isPressed() {
         return button;
     }

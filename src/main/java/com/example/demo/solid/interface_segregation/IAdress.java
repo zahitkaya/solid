@@ -1,12 +1,9 @@
-package solid;
-
-public class InterfaceSegregation {
-    /*
+package com.example.demo.solid.interface_segregation;
+ /*
     Bir arayüze gerekli olmayan eklentilerin eklenmemesini belirten bir prensiptir.
     Arayüzde o an sadece kullanılacak olan eklentilerin ekli olması gerektiğini savunur.
 
      */
-}
 /*
 interface IUser{
     String getName();
@@ -21,17 +18,11 @@ interface IUser{
  eğitim bilgisinin aynı arayüzde olması ne kadar doğru?
  */
 
-interface IUser{
-    String getName();
-    int getId();
-}
-interface IAdress{
+interface IAdress {
+
+
+
     String getAdress();
+
     String getCounty();
 }
-interface IEducation{
-    String getSchool();
-    Boolean getGraduation();
-}
-//Böylelikle bütün arayüzlere gereğinden fazla yüklememiş olduk.
-

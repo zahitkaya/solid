@@ -9,15 +9,20 @@ public class LiskovSubstitution {
      */
 
     public static void main(String[] args) {
-        Square s=new Square();
+        Square s = new Square();
         s.setHeight(5);
-        Area area=new Area();
-        System.out.println(area.calculateArea(s));
+        Area area = new Area();
+        System.out.println(area.calculateArea(s));//25
+
+        Rectangle r=new Rectangle();
+        r.setHeight(10);
+        r.setWeight(2);
+        System.out.println(area.calculateArea(r));//20
     }
 }
 //Kare bir dikdörtgendir. Ama her diktörtgen kare değildir.
 
-class Rectangle{
+class Rectangle {
     private int height;
     private int weight;
 
@@ -37,7 +42,8 @@ class Rectangle{
         this.weight = weight;
     }
 }
-class Square extends Rectangle{
+
+class Square extends Rectangle {
     @Override
     public void setHeight(int height) {
         super.setHeight(height);
@@ -51,9 +57,10 @@ class Square extends Rectangle{
     }
 
 }
-class Area{
-    int calculateArea(Rectangle rectangle){
-        return rectangle.getHeight()*rectangle.getWeight();
+
+class Area {
+    int calculateArea(Rectangle rectangle) {
+        return rectangle.getHeight() * rectangle.getWeight();
     }
 }
 
